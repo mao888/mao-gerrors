@@ -1,3 +1,3 @@
 module github.com/mao888/go-errors
 
-go 1.16
+go 1.18
