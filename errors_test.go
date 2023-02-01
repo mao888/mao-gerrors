@@ -16,10 +16,14 @@ func TestAddStack(t *testing.T) {
 
 func TestNew(t *testing.T) {
 
-	err2 := New(1000, "业务错误")
-	err22 := Wrap(err2, "包装错误")
-	fmt.Println(err22, Err(err22))
-	fmt.Println(Resp(err22))
+	err1 := New(1000, "业务错误1")
+	fmt.Println(Resp(err1))
+
+	err2 := Wrap(err1, "包装错误")
+	fmt.Println("err22:=", err2)
+
+	err3 := WrapCode(err1, 2000, "WrapCode")
+	fmt.Println("err3:=", err3)
 
 	//fmt.Printf("%+v\n", err1)
 	//err1 = Wrap(err1, "exec0 wrap")
