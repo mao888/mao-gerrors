@@ -1,3 +1,3 @@
-module github.com/mao888/go-errors
+module github.com/mao888/mao-gerrors
 
-go 1.18
+go 1.19
